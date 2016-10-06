@@ -1,0 +1,10 @@
+<div class="main-area text-center" ng-controller="MainController as mainCtrl">
+  <form ng-submit="mainCtrl.enteredUserName()">
+        <div class="form-group search-form">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="mainCtrl.userName" value="mainCtrl.userName" placeholder="Enter your name.."/>
+        </div>
+        </div>
+      </form>
+      <a ng-click="mainCtrl.enteredUserName()" class="btn btn-primary">Start Quiz</a>
+</div>

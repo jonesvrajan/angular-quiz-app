@@ -1,0 +1,30 @@
+<div ng-controller="QuizController as quizCtrl" class="quiz-area">
+  <h2>Welcome {{quizCtrl.shared}}, </h2>
+  <ul class="quiz-question">
+    <li class="fade-in">
+      <h3>{{quizCtrl.questions[quizCtrl.questionNo].question}}</h3>
+      <ul class="quiz-choices">
+        <li ng-repeat="choice in quizCtrl.questions[quizCtrl.questionNo].choices">
+          <a href ng-click="quizCtrl.nextQuestion(choice, $index)"><span class="glyphicon glyphicon-unchecked"></span> {{choice}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+<div ng-show="quizCtrl.questionNo == quizCtrl.questions.length" class="result-area">
+  <h2>Results</h2>
+  You Scored: {{quizCtrl.score}}/{{quizCtrl.questionsLength}}
+    <canvas id="pie" class="chart chart-pie"
+  chart-data="quizCtrl.data" chart-labels="quizCtrl.labels" chart-options="options">
+</canvas> 
+  <ul>
+    <li ng-repeat="(index,quiz) in quizCtrl.questions">
+      <h3>{{quiz.question}}</h3>
+      <ul>
+        <li> Correct Answer :  {{quiz.choices[quiz.correctAnswer]}}</li>
+        <li>Your Answer : {{quizCtrl.userAnswers[index]}}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>

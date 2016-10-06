@@ -1,0 +1,289 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  background: #00bcd4;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  transition: color 1s ease;
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  &:active {
+    text-decoration: none;
+    color: #FFF;
+  }
+}
+
+/* Custom page header */
+.header {
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #222;
+  color: #FFF;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+  .navbar-collapse {
+    float: right;
+  }
+
+  .container {
+    max-width: 980px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+}
+
+.ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.product-list {
+  > li {
+    margin-bottom: 25px;
+  }
+
+  .product-details {
+    padding: 20px 0;
+    li {
+      margin-bottom: 10px;
+      &.product-name {
+        text-transform: uppercase;
+      }
+      &.product-variation {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.input-group-addon {
+  cursor: pointer;
+}
+
+.search-results {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &.definitions {
+      margin-bottom: 15px;
+    }
+
+    &.tags {
+      li {
+        margin-bottom: 10px;
+        display: inline-block;
+        padding: 5px 10px;
+        background: #EEE;
+        border-radius: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  h4 {
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .bg-danger {
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+.main-area {
+  padding: 60px 0;
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
+  .input-group {
+    display: block;
+    .form-control {
+      text-align: center;
+      float: none;
+      width: 100%;
+      border: 0;
+      height: 50px;
+      padding: 5px 20px;
+      display: block;
+      border-radius: 5px !important;
+    }
+  }
+}
+
+.quiz-area {
+  padding-bottom: 120px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .quiz-question {
+    text-align: center;
+    .quiz-choices {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.quiz-choices li a {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  display: inline-block;
+}
+
+.quiz-choices li a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 130px;
+  height: 40px;
+  margin-left: -65px;
+  margin-top: -20px;
+  background: #8bc34a;
+  border-radius: 100%;
+  opacity: .6;
+
+  transform: scale(0);
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.quiz-choices li a:not(:active):after {
+  animation: ripple 1s ease forwards;
+}
+
+/* fixes initial animation run, without user input, on page load.
+ */
+.quiz-choices li a:after {
+  visibility: hidden;
+}
+
+.quiz-choices li a:focus:after {
+  visibility: visible;
+}

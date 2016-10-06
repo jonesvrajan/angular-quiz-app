@@ -1,0 +1,31 @@
+{"allQuestions" : [
+    {
+        "question": "Which of the following is used to represent Visited hyperlink?", 
+        "choices": [":visited", ":clicked", ":focus", ":link"], 
+        "correctAnswer": 0
+    },
+
+    {
+        "question": "Which of the following is used to represent unvisited hyperlink?", 
+        "choices": [":nonvisited", ":link", ":unvisited", ":fresh"], 
+        "correctAnswer": 1
+    }, 
+
+    {
+        "question": "We write single ______ before the pseudo-class property?", 
+        "choices": ["Dash", "Dot", "Colon", "Semicolon"], 
+        "correctAnswer": 2
+    },
+        {
+        "question": "Pseudo-classes are used to represent ___________________?", 
+        "choices": ["Static Events", "Dynamic Events", "Related Events", "Casual Events"], 
+        "correctAnswer": 1
+    },
+
+    {
+        "question": "Element that Currently has the user’s mouse pointer hovering over it represents one of the following Pseudo Class.", 
+        "choices": [":hover", ":focus", ":active", ":link"], 
+        "correctAnswer": 0
+    }
+
+]}

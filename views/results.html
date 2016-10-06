@@ -1,0 +1,14 @@
+<div ng-controller="QuizController as quizCtrl" class="quiz-area">
+  <h2>Results</h2>
+  <ul>
+    <li ng-repeat="quiz in quizCtrl.questions">
+      <h2>{{quiz.question}}</h2>
+      <ul>
+        <li> Correct Answer :  {{quiz.choices[quiz.correctAnswer]}}</li>
+        <li> Your Answer :  {{quiz.choices[quiz.correctAnswer]}}</li>
+        <li>Correct Answer : {{quizCtrl.userAnswers[1]}}</li>
+      </ul>
+      <li>{{quizCtrl.userAnswers}}</li>
+    </li>
+  </ul>
+</div>
