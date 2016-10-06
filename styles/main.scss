@@ -204,6 +204,21 @@ a {
     margin: 0;
     padding: 0;
   }
+  h2 {
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 100px;
+    }
+  }
+
+  h3 {
+    line-height: 40px;
+    font-weight: normal;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
 }
 @media screen and (min-width: 768px) {
   .quiz-question {
@@ -255,7 +270,6 @@ a {
   margin-left: -65px;
   margin-top: -20px;
   background: #8bc34a;
-  border-radius: 100%;
   opacity: .6;
 
   transform: scale(0);
@@ -286,4 +300,30 @@ a {
 
 .quiz-choices li a:focus:after {
   visibility: visible;
+}
+
+.btn-primary {
+  background: #8bc34a;
+  border: 0;
+  padding: 10px 20px;
+  &:hover, &:focus, &:active {
+    background: #6F9E39 !important;
+  }
+}
+
+.result-area {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+   margin-top: -30px; 
+  }
+  
+  canvas {
+    margin: 50px 0;
+  }
+
+  .result-compare {
+    @media screen and (min-width: 768px) {
+      
+    }
+  }
 }

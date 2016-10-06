@@ -8926,13 +8926,35 @@ a:active {
   margin: 0;
   padding: 0;
 }
+/* line 207, ../../app/styles/main.scss */
+.quiz-area h2 {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  /* line 207, ../../app/styles/main.scss */
+  .quiz-area h2 {
+    margin-bottom: 100px;
+  }
+}
+/* line 214, ../../app/styles/main.scss */
+.quiz-area h3 {
+  line-height: 40px;
+  font-weight: normal;
+}
+@media screen and (max-width: 767px) {
+  /* line 214, ../../app/styles/main.scss */
+  .quiz-area h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 
 @media screen and (min-width: 768px) {
-  /* line 209, ../../app/styles/main.scss */
+  /* line 224, ../../app/styles/main.scss */
   .quiz-question {
     text-align: center;
   }
-  /* line 212, ../../app/styles/main.scss */
+  /* line 227, ../../app/styles/main.scss */
   .quiz-question .quiz-choices li {
     display: inline-block;
     margin-right: 10px;
@@ -8947,7 +8969,7 @@ a:active {
     opacity: 1;
   }
 }
-/* line 225, ../../app/styles/main.scss */
+/* line 240, ../../app/styles/main.scss */
 .fade-in {
   opacity: 0;
   /* make things invisible upon start */
@@ -8958,7 +8980,7 @@ a:active {
   animation-duration: 1s;
 }
 
-/* line 240, ../../app/styles/main.scss */
+/* line 255, ../../app/styles/main.scss */
 .quiz-choices li a {
   position: relative;
   overflow: hidden;
@@ -8966,7 +8988,7 @@ a:active {
   display: inline-block;
 }
 
-/* line 247, ../../app/styles/main.scss */
+/* line 262, ../../app/styles/main.scss */
 .quiz-choices li a:after {
   content: '';
   display: block;
@@ -8978,7 +9000,6 @@ a:active {
   margin-left: -65px;
   margin-top: -20px;
   background: #8bc34a;
-  border-radius: 100%;
   opacity: .6;
   transform: scale(0);
 }
@@ -8995,21 +9016,47 @@ a:active {
     transform: scale(1);
   }
 }
-/* line 277, ../../app/styles/main.scss */
+/* line 291, ../../app/styles/main.scss */
 .quiz-choices li a:not(:active):after {
   animation: ripple 1s ease forwards;
 }
 
 /* fixes initial animation run, without user input, on page load.
  */
-/* line 283, ../../app/styles/main.scss */
+/* line 297, ../../app/styles/main.scss */
 .quiz-choices li a:after {
   visibility: hidden;
 }
 
-/* line 287, ../../app/styles/main.scss */
+/* line 301, ../../app/styles/main.scss */
 .quiz-choices li a:focus:after {
   visibility: visible;
+}
+
+/* line 305, ../../app/styles/main.scss */
+.btn-primary {
+  background: #8bc34a;
+  border: 0;
+  padding: 10px 20px;
+}
+/* line 309, ../../app/styles/main.scss */
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: #6F9E39 !important;
+}
+
+/* line 314, ../../app/styles/main.scss */
+.result-area {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  /* line 314, ../../app/styles/main.scss */
+  .result-area {
+    margin-top: -30px;
+  }
+}
+/* line 320, ../../app/styles/main.scss */
+.result-area canvas {
+  margin: 50px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

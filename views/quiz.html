@@ -12,12 +12,12 @@
   </ul>
 
 <div ng-show="quizCtrl.questionNo == quizCtrl.questions.length" class="result-area">
-  <h2>Results</h2>
+  <h3>Results</h3>
   You Scored: {{quizCtrl.score}}/{{quizCtrl.questionsLength}}
     <canvas id="pie" class="chart chart-pie"
   chart-data="quizCtrl.data" chart-labels="quizCtrl.labels" chart-options="options">
 </canvas> 
-  <ul>
+  <ul class="result-compare">
     <li ng-repeat="(index,quiz) in quizCtrl.questions">
       <h3>{{quiz.question}}</h3>
       <ul>
